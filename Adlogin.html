@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="adlogin.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="C:\Users\SADHU AKSHAYA\OneDrive\Pictures\Screenshots\Screenshot 2024-06-14 214124.png" width="100px" height="auto">
+        <h1><u>VEHICLE ASSISTANCE NEXUS!</u></h1>
+    </div>
+    <div class="slogan">
+        <p>~Empowering Safe Travels</p>
+    </div>
+    <div class="slidebar">
+        <ul>
+            <li><a href="C:\HTML-Akshu\HOME.html">Home</a></li>
+            <li><a href="C:\HTML-Akshu\ABOUT US.html">About us</a></li>
+            <li><a href="C:\HTML-Akshu\CONTACT.html">Contacts</a></li>
+            <li><a href="C:\HTML-Akshu\driver.html">Driver's</a></li>
+        </ul>
+    </div>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <p id="errorMessage" style="color: red;"></p>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting the traditional way
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Replace these with your actual username and password checks
+                const correctUsername = 'admin';
+                const correctPassword = 'password123';
+
+                if (username === correctUsername && password === correctPassword) {
+                    window.location.href = "C:\\HTML-Akshu\\admin.html"; 
+                } else {
+                    errorMessage.textContent = 'Incorrect!';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
